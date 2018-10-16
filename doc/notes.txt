@@ -1,0 +1,6 @@
+
+BOM
+    Kable:
+	(mouser) "Draht u. Kabel" -> "FFC- / FPC-Verbinder"
+	Wurth Electronics 687710100002 
+	0.5mm Type 2 10P 100mm length
