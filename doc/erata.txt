@@ -1,0 +1,6 @@
+V0.1.x
+======
+
+* RX/TX messup: TX-label on the Nucleo is refering to the ST-Link. So this has to turned
+* Reset-Button would be nice
+* Additional Ground-Pin
