@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:stdebug-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -19,7 +18,7 @@ L Connector:Conn_01x10_Female DBG1
 U 1 1 5BB916D9
 P 4700 2600
 F 0 "DBG1" H 4594 3185 50  0000 C CNN
-F 1 "Conn_01x10_Female" H 4594 3094 50  0000 C CNN
+F 1 "DBG" H 4594 3094 50  0000 C CNN
 F 2 "footprints:Hirose_FH12-10S-0.5SH_1x10_P0.5mm_Horizontal" H 4700 2600 50  0001 C CNN
 F 3 "~" H 4700 2600 50  0001 C CNN
 	1    4700 2600
@@ -37,15 +36,13 @@ F 3 "~" H 7000 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 2200 5700 2200
-Wire Wire Line
 	4900 2300 6800 2300
 Wire Wire Line
 	4900 2400 5450 2400
 Wire Wire Line
 	6800 2500 4900 2500
 Wire Wire Line
-	4900 2600 6800 2600
+	4900 2600 5900 2600
 Wire Wire Line
 	4900 2700 6800 2700
 Text Label 6550 2200 0    50   ~ 0
@@ -65,7 +62,7 @@ L Connector:Conn_01x02_Male UART1
 U 1 1 5BB98B27
 P 6800 3200
 F 0 "UART1" H 6773 3173 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 6773 3082 50  0000 R CNN
+F 1 "UART" H 6773 3082 50  0000 R CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 6800 3200 50  0001 C CNN
 F 3 "~" H 6800 3200 50  0001 C CNN
 	1    6800 3200
@@ -74,47 +71,7 @@ $EndComp
 Wire Wire Line
 	4900 2800 6300 2800
 Wire Wire Line
-	6300 2800 6300 3200
-Wire Wire Line
-	6300 3200 6600 3200
-Wire Wire Line
 	4900 2900 6100 2900
-Wire Wire Line
-	6100 2900 6100 3300
-Wire Wire Line
-	6100 3300 6600 3300
-$Comp
-L Connector:Conn_01x01_Male VDD1
-U 1 1 5BB98E93
-P 5500 2000
-F 0 "VDD1" H 5606 2178 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 5606 2087 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 5500 2000 50  0001 C CNN
-F 3 "~" H 5500 2000 50  0001 C CNN
-	1    5500 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male GND1
-U 1 1 5BB99075
-P 6100 2000
-F 0 "GND1" H 6206 2178 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 6206 2087 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 6100 2000 50  0001 C CNN
-F 3 "~" H 6100 2000 50  0001 C CNN
-	1    6100 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5700 2000 5700 2200
-Connection ~ 5700 2200
-Wire Wire Line
-	5700 2200 6800 2200
-Wire Wire Line
-	6300 2000 6300 2400
-Connection ~ 6300 2400
-Wire Wire Line
-	6300 2400 6800 2400
 $Comp
 L power:GND #PWR0101
 U 1 1 5BB9981A
@@ -129,6 +86,146 @@ $EndComp
 Wire Wire Line
 	5450 2400 5450 3300
 Connection ~ 5450 2400
+$Comp
+L Switch:SW_DIP_x01 SW2
+U 1 1 60F10269
+P 5900 4000
+F 0 "SW2" V 5854 4130 50  0000 L CNN
+F 1 "RST" V 5945 4130 50  0000 L CNN
+F 2 "footprints:panasonic_evpa302k" H 5900 4000 50  0001 C CNN
+F 3 "~" H 5900 4000 50  0001 C CNN
+	1    5900 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 60F10CF3
+P 5900 4600
+F 0 "#PWR0102" H 5900 4350 50  0001 C CNN
+F 1 "GND" H 5905 4427 50  0000 C CNN
+F 2 "" H 5900 4600 50  0001 C CNN
+F 3 "" H 5900 4600 50  0001 C CNN
+	1    5900 4600
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	5450 2400 6300 2400
+	5900 2600 5900 3600
+Connection ~ 5900 2600
+Wire Wire Line
+	5900 2600 6800 2600
+Wire Wire Line
+	5900 4300 5900 4400
+Wire Wire Line
+	6100 2900 6100 3200
+Wire Wire Line
+	6600 3200 6100 3200
+Wire Wire Line
+	6300 2800 6300 3300
+Wire Wire Line
+	6300 3300 6600 3300
+Text Notes 2900 3000 0    50   ~ 0
+1: ->VDD 3V3 Target\n2 :SWCLK\n3: GND\n4: SWDIO\n5: NRST\n6: SWO(reserved)\n7: Uart TX\n8: Uart RX\n9: VIN 5V\n10: BOOT0/reserved\n\nSTM32F303 does not support USB\nUse STM32F103C8 like onboard flashers\n
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 60F178B4
+P 5100 4100
+F 0 "SW1" V 5054 4230 50  0000 L CNN
+F 1 "BOOT" V 5145 4230 50  0000 L CNN
+F 2 "footprints:panasonic_evpa302k" H 5100 4100 50  0001 C CNN
+F 3 "~" H 5100 4100 50  0001 C CNN
+	1    5100 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 60F178D0
+P 5100 4600
+F 0 "#PWR0103" H 5100 4350 50  0001 C CNN
+F 1 "GND" H 5105 4427 50  0000 C CNN
+F 2 "" H 5100 4600 50  0001 C CNN
+F 3 "" H 5100 4600 50  0001 C CNN
+	1    5100 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60F18930
+P 5100 3550
+F 0 "R1" H 5170 3596 50  0000 L CNN
+F 1 "330" H 5170 3505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5030 3550 50  0001 C CNN
+F 3 "~" H 5100 3550 50  0001 C CNN
+	1    5100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 3100 5100 3100
+Wire Wire Line
+	5100 3100 5100 3400
+Wire Wire Line
+	5100 3700 5100 3800
+Wire Wire Line
+	5100 4600 5100 4400
+Text Notes 3150 3650 0    50   ~ 0
+The boot-pin might be hard routed to ground.\n330 Ohms will limit current to 10mA @3V3.
+$Comp
+L Connector:Conn_01x03_Female J2
+U 1 1 60F1E01B
+P 5000 1500
+F 0 "J2" H 4892 1175 50  0000 C CNN
+F 1 "POW" H 4892 1266 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5000 1500 50  0001 C CNN
+F 3 "~" H 5000 1500 50  0001 C CNN
+	1    5000 1500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 2200 5750 2200
+Wire Wire Line
+	5450 2400 5600 2400
+Wire Wire Line
+	5200 1600 5600 1600
+Wire Wire Line
+	5600 1600 5600 2400
+Connection ~ 5600 2400
+Wire Wire Line
+	5600 2400 6800 2400
+Wire Wire Line
+	5200 1500 5750 1500
+Wire Wire Line
+	5750 1500 5750 2200
+Connection ~ 5750 2200
+Wire Wire Line
+	5750 2200 6800 2200
+Wire Wire Line
+	5200 1400 6000 1400
+Wire Wire Line
+	6000 1400 6000 3000
+Wire Wire Line
+	6000 3000 4900 3000
+$Comp
+L Device:C C1
+U 1 1 60F2F8B5
+P 6500 4000
+F 0 "C1" H 6615 4046 50  0000 L CNN
+F 1 "100n" H 6615 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6538 3850 50  0001 C CNN
+F 3 "~" H 6500 4000 50  0001 C CNN
+	1    6500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3850 6500 3600
+Wire Wire Line
+	6500 3600 5900 3600
+Connection ~ 5900 3600
+Wire Wire Line
+	5900 3600 5900 3700
+Wire Wire Line
+	6500 4150 6500 4400
+Wire Wire Line
+	6500 4400 5900 4400
+Connection ~ 5900 4400
+Wire Wire Line
+	5900 4400 5900 4600
 $EndSCHEMATC
