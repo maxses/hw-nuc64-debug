@@ -6,23 +6,36 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>KiCad BOM Example 5</title>
     </head>
+    <style>
+        body {
+            font-family: Sans-Serif;
+            font-size: 12px;
+        }
+        *{ color-adjust: exact;  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    </style>
     <body>
-    <h1>/home/mase/wp/hw/nuc64-debug/nuc64-debug.sch</h1>
-    <p>Di 03 Aug 2021 20:05:01 CEST</p>
-    <p>Eeschema 5.1.9+dfsg1-1</p>
-    <p><b>Component Count:</b>10</p>
+    <h1 style='font-size: 16px'>nuc64-debug/nuc64-debug.kicad_sch</h1>
+    <p>2026-01-17T14:37:51+0100</p>
+    <p><b>Component Count:</b>22</p>
     <table>
-    <tr><th style='width:640px'>Ref</th><th>Qnty</th><th>Value</th><th>Part</th><th>Footprint</th><th>Description</th><th>Vendor</th></tr>
-    <tr><td>C1</td><td>1</td><td>100n</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric</td><td>Unpolarized capacitor</td><td></td></tr>
-    <tr><td>D1</td><td>1</td><td>LED</td><td>Device:LED</td><td>LED_SMD:LED_0603_1608Metric</td><td>Light emitting diode</td><td></td></tr>
-    <tr><td>DBG1</td><td>1</td><td>DBG</td><td>Connector:Conn_01x10_Female</td><td>footprints:Hirose_FH12-10S-0.5SH_1x10_P0.5mm_Horizontal</td><td>Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
-    <tr><td>J1</td><td>1</td><td>SWD</td><td>Connector:Conn_01x06_Female</td><td>Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical</td><td>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
-    <tr><td>J2</td><td>1</td><td>POW</td><td>Connector:Conn_01x03_Female</td><td>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</td><td>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr>
-    <tr><td>R1</td><td>1</td><td>330</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric</td><td>Resistor</td><td></td></tr>
-    <tr><td>R2</td><td>1</td><td>R</td><td>Device:R</td><td>Resistor_SMD:R_0603_1608Metric</td><td>Resistor</td><td></td></tr>
-    <tr><td>SW1</td><td>1</td><td>BOOT</td><td>Switch:SW_DIP_x01</td><td>footprints:panasonic_evpa302k</td><td>1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol</td><td></td></tr>
-    <tr><td>SW2</td><td>1</td><td>RST</td><td>Switch:SW_DIP_x01</td><td>footprints:panasonic_evpa302k</td><td>1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol</td><td></td></tr>
-    <tr><td>UART1</td><td>1</td><td>UART</td><td>Connector:Conn_01x02_Male</td><td>Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical</td><td>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</td><td></td></tr><!--TABLEROW-->
+    <tr><th style=''>Ref</th><th>Qnty</th><th>Value</th><th>Part</th><th>Warehouse</th></tr>
+    <tr style='background-color:#EEEEEE'><td>C1, C2, C5</td><td>3</td><td>100n</td><td>Device:C</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>C3</td><td>1</td><td>10n</td><td>Device:C</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>C4</td><td>1</td><td>10µ</td><td>Device:C</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>D1</td><td>1</td><td>LED Violet</td><td>Device:LED</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>D2</td><td>1</td><td>RX</td><td>Device:LED</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>D3</td><td>1</td><td>TX</td><td>Device:LED</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>DBG1</td><td>1</td><td>DBG</td><td>Connector:Conn_01x10_Socket</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>J1</td><td>1</td><td>SWD</td><td>Connector:Conn_01x06_Socket</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>J2</td><td>1</td><td>POW</td><td>Connector:Conn_01x03_Socket</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>R1, R3</td><td>2</td><td>330</td><td>Device:R</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>R2</td><td>1</td><td>2K</td><td>Device:R</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>R4, R5</td><td>2</td><td>1K</td><td>Device:R</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>R6, R7</td><td>2</td><td>680</td><td>Device:R</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>R8</td><td>1</td><td>1M</td><td>Device:R</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>SW1</td><td>1</td><td>BOOT</td><td>Switch:SW_DIP_x01</td><td></td></tr>
+    <tr style='background-color:#FFFFFF'><td>SW2</td><td>1</td><td>RST</td><td>Switch:SW_DIP_x01</td><td></td></tr>
+    <tr style='background-color:#EEEEEE'><td>UART1</td><td>1</td><td>UART</td><td>Connector:Conn_01x02_Pin</td><td></td></tr><!--TABLEROW-->
     </table>
     </body>
 </html>
