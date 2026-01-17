@@ -1,3 +1,8 @@
+V0.2.0
+======
+
+* R2 for VDD-Target: 1K is OK, 2K2 perfect
+
 V0.1.x
 ======
 

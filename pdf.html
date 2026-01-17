@@ -8,10 +8,19 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="doc/pdf.css" />
 </head>
@@ -38,6 +47,10 @@ h1 {
 <h1 id="nuc64debug">NUC64DEBUG</h1>
 <h2 id="overview">Overview</h2>
 <table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 85%" />
+</colgroup>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Name</td>
@@ -45,19 +58,21 @@ h1 {
 </tr>
 <tr class="even">
 <td style="text-align: left;">URL</td>
-<td style="text-align: left;"><a href="http://campo.seesslen.net/nuc64debug">Link</a></td>
+<td style="text-align: left;"><a
+href="http://campo.seesslen.net/nuc64debug">Link</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">SW-Project</td>
-<td style="text-align: left;"><a href="http://hase.seesslen.net/redmine/projects/nuc64debug">Link</a></td>
+<td style="text-align: left;"><a
+href="http://hase.seesslen.net/redmine/projects/nuc64debug">Link</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">HW-Rev</td>
-<td style="text-align: left;">v0.2.x</td>
+<td style="text-align: left;">v0.3.x</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">SN:</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">Docu</td>
+<td style="text-align: left;">20260117</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Dimensions</td>
@@ -65,9 +80,14 @@ h1 {
 </tr>
 </tbody>
 </table>
-<p>Small adapter PCB to connect a STM32 based PCB via 10P-FPC with the STLink-part of an Nucleo64-Board.</p>
+<p>Small adapter PCB to connect a STM32 based PCB via 10P-FPC with the
+STLink-part of an Nucleo64-Board.</p>
 <h2 id="pcb">PCB</h2>
 <table>
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 48%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Top</th>
@@ -76,8 +96,10 @@ h1 {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><img src="doc/preview_bottom.png" width="512px"></td>
-<td style="text-align: left;"><img src="doc/preview_top.png" width="512px"></td>
+<td
+style="text-align: left;"><img src="doc/preview_bottom.png" width="256px"></td>
+<td
+style="text-align: left;"><img src="doc/preview_top.png" width="256px"></td>
 </tr>
 </tbody>
 </table>
@@ -120,11 +142,11 @@ h1 {
 </tr>
 <tr class="odd">
 <td style="text-align: left;">7</td>
-<td style="text-align: left;">UART TX</td>
+<td style="text-align: left;">UART TX (Target)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">8</td>
-<td style="text-align: left;">UART RX</td>
+<td style="text-align: left;">UART RX (Target)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">9</td>
@@ -132,7 +154,7 @@ h1 {
 </tr>
 <tr class="even">
 <td style="text-align: left;">10</td>
-<td style="text-align: left;">NC (Reserved for BOOT0)</td>
+<td style="text-align: left;">BOOT0</td>
 </tr>
 </tbody>
 </table>
@@ -182,18 +204,23 @@ h1 {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">1</td>
-<td style="text-align: left;">TX (ST-Link)</td>
+<td style="text-align: left;">TX (ST-Link / Host) -&gt; yellow on
+adapter cable</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">2</td>
-<td style="text-align: left;">RX (ST-Link)</td>
+<td style="text-align: left;">RX (ST-Link / Host) -&gt; red on adapter
+cable</td>
 </tr>
 </tbody>
 </table>
 <h2 id="errata">Errata</h2>
 <ul>
-<li><p>UART only works with low data rate (not necessarily low baud rate). Reason may be located in (some) Nucleos STLink implementation.</p></li>
-<li><p>Boot-Button not functional</p></li>
+<li><p>If you have problems with the UART you may need to update
+firmware of STLink. Version V2J20M4 did not work, after update to
+V2J38M27 problems disappeared.</p></li>
+<li><p>V0.2.x: Boot-Button not functional. Connect J2-Pin2(VDD) to
+button pad in the corner.</p></li>
 </ul>
 <div class="footer">
 campo@seesslen.net

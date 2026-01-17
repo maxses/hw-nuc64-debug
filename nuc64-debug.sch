@@ -244,7 +244,7 @@ L Device:R R2
 U 1 1 60F4083F
 P 8150 3350
 F 0 "R2" H 8220 3396 50  0000 L CNN
-F 1 "R" H 8220 3305 50  0000 L CNN
+F 1 "2K" H 8220 3305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 8080 3350 50  0001 C CNN
 F 3 "~" H 8150 3350 50  0001 C CNN
 	1    8150 3350
@@ -255,7 +255,7 @@ L Device:LED D1
 U 1 1 60F40F26
 P 8150 2850
 F 0 "D1" V 8189 2732 50  0000 R CNN
-F 1 "LED" V 8098 2732 50  0000 R CNN
+F 1 "LED Violet" V 8098 2732 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 8150 2850 50  0001 C CNN
 F 3 "~" H 8150 2850 50  0001 C CNN
 	1    8150 2850
@@ -274,4 +274,10 @@ Wire Wire Line
 Connection ~ 6400 2200
 Wire Wire Line
 	6400 2200 6800 2200
+Text Notes 8650 3450 0    50   ~ 0
+VF   2,8V\nCF   20mA\nR     10Ohm -> Aua!\n       120Ohm: Hell genug, fast noch zu hell\n       1K: sieht gut aus\n       2K2: sieht besser aus\n      2K: Thats it\n
+Text Notes 7300 2700 0    50   ~ 0
+1: VDD\n2: SWCLK\n3: GND\n4: SWDIO\n5: NRST\n6: SWO
+Text Notes 7200 3350 0    50   ~ 0
+1: TX (ST-Link)\n2: RX (ST-Link)
 $EndSCHEMATC

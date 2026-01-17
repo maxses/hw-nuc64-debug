@@ -27,8 +27,8 @@ h1 {
 | Name      | NUC64DEBUG                                                    |
 | URL       | [Link]( http://campo.seesslen.net/nuc64debug )                |
 | SW-Project| [Link]( http://hase.seesslen.net/redmine/projects/nuc64debug )|
-| HW-Rev    | v0.2.x                                                        |
-| SN:       |                                                               |
+| HW-Rev    | v0.3.x                                                        |
+| Docu      | 20260117                                                      |
 | Dimensions| 17.15mm x 22.86mm                                             |
 
 Small adapter PCB to connect a STM32 based PCB via 10P-FPC with the STLink-part
@@ -38,7 +38,7 @@ of an Nucleo64-Board.
 
 | Top                                              |  Bottom                                       |
 |:-------------------------------------------------|:----------------------------------------------|
-| <img src="doc/preview_bottom.png" width="512px"> | <img src="doc/preview_top.png" width="512px"> |
+| <img src="doc/preview_bottom.png" width="256px"> | <img src="doc/preview_top.png" width="256px"> |
 
 <div class="pagebreak"> </div>
 
@@ -57,7 +57,7 @@ of an Nucleo64-Board.
 | 7             | UART TX (Target)       |
 | 8             | UART RX (Target)       |
 | 9             | VIN 5V                 |
-| 10            | NC (Reserved for BOOT0)|
+| 10            | BOOT0                  |
 
 ## J1
 
@@ -72,17 +72,17 @@ of an Nucleo64-Board.
 
 ## UART1
 
-| Connector-pin |  Function                               |
-|:--------------|:----------------------------------------|
-| 1             | TX (ST-Link) -> yellow on adapter cable |
-| 2             | RX (ST-Link) -> red on adapter cable    |
+| Connector-pin |  Function                                      |
+|:--------------|:-----------------------------------------------|
+| 1             | TX (ST-Link / Host) -> yellow on adapter cable |
+| 2             | RX (ST-Link / Host) -> red on adapter cable    |
 
 ## Errata
 
 * If you have problems with the  UART you may need to update firmware of STLink.
 Version V2J20M4 did not work, after update to V2J38M27 problems disappeared.
 
-* Boot-Button not functional
+* V0.2.x: Boot-Button not functional. Connect J2-Pin2(VDD) to button pad in the corner.
 
 
 <div class="footer"> campo@seesslen.net </div>
