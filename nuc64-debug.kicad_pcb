@@ -7,6 +7,9 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(comment 4 "AISLER Project ID: PCZWHZHW")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(2 "B.Cu" signal)
@@ -6317,7 +6320,7 @@
 		)
 	)
 	(gr_text "NUC64DEBUG\nV0.3.x"
-		(at 112.2 82 270)
+		(at 111.2 82 270)
 		(layer "B.SilkS")
 		(uuid "00000000-0000-0000-0000-000060efd866")
 		(effects

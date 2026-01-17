@@ -2303,6 +2303,16 @@
 		)
 		(uuid "cf18222b-f1f2-49cc-9920-d4ebecb85f64")
 	)
+	(text "Already pulled high on Nucleo board.\nNo resistor found. Could be internal pullup\nof STLink."
+		(exclude_from_sim no)
+		(at 243.586 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "daab0d16-a981-4c4f-b946-fc899a96032d")
+	)
 	(junction
 		(at 163.83 83.82)
 		(diameter 0)
@@ -4508,7 +4518,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "1b4256dc-0de5-44bf-b2c5-1efca6acd904")
 		(property "Reference" "R4"
 			(at 216.408 100.4316 0)
@@ -4519,8 +4529,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1K"
-			(at 216.408 102.743 0)
+		(property "Value" "OPT_1K"
+			(at 217.678 108.966 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5606,7 +5616,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "fb4ffad7-6e49-4308-b7e3-b46e4c581d4d")
 		(property "Reference" "R5"
 			(at 210.058 100.4316 0)
@@ -5617,8 +5627,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1K"
-			(at 210.058 102.743 0)
+		(property "Value" "OPT_1K"
+			(at 211.328 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
