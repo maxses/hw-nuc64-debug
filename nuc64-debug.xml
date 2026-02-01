@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/mase/wp/hw/nuc64-debug/nuc64-debug.kicad_sch</source>
-    <date>2026-01-17T14:49:00+0100</date>
+    <date>2026-02-01T08:36:21+0100</date>
     <tool>Eeschema 9.0.7+dfsg-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -283,7 +283,7 @@
       <tstamps>8b006500-bbe3-4d56-a88e-266801cf22a1</tstamps>
     </comp>
     <comp ref="R4">
-      <value>1K</value>
+      <value>OPT_1K</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <description>Resistor</description>
@@ -302,7 +302,7 @@
       <tstamps>1b4256dc-0de5-44bf-b2c5-1efca6acd904</tstamps>
     </comp>
     <comp ref="R5">
-      <value>1K</value>
+      <value>OPT_1K</value>
       <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <datasheet>~</datasheet>
       <description>Resistor</description>
