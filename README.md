@@ -18,7 +18,9 @@ h1 {
 
 </style>
 
+<div style="background:url(doc/background.jpg);">
 # NUC64DEBUG
+</div>
 
 ## Overview
 
