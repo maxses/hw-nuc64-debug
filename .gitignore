@@ -10,5 +10,10 @@
 .directory
 rescue-backup
 
+_autosave-nuc64-debug.sch
+fp-info-cache
+nuc64-debug-backups/
+nuc64-debug.sch-bak
+
 
 #---fin------------------------------------------------------------------------
