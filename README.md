@@ -1,4 +1,4 @@
-<h1 style="background:url(doc/background.jpg);">NUC64DEBUG</h1>
+# NUC64DEBUG
 
 ## Overview
 
@@ -14,8 +14,8 @@ of an Nucleo64-Board.
 
 ## PCB
 
-| Top                                              |  Bottom                                       |
-|:-------------------------------------------------|:----------------------------------------------|
+| Top                                           |  Bottom                                              |
+|:----------------------------------------------|:-----------------------------------------------------|
 | <img src="doc/nuc64-debug.jpg" width="256px"> | <img src="doc/nuc64-debug_bottom.jpg" width="256px"> |
 
 <div class="pagebreak"> </div>
@@ -61,7 +61,3 @@ of an Nucleo64-Board.
 Version V2J20M4 did not work, after update to V2J38M27 problems disappeared.
 
 * V0.2.x: Boot-Button not functional. Connect J2-Pin2(VDD) to button pad in the corner.
-
-
-<div style="text-align: right;"> campo@seesslen.net </div>
-
