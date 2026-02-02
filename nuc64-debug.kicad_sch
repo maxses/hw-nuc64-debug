@@ -2259,6 +2259,17 @@
 		)
 		(uuid "2919307f-4f44-4afa-bb97-10f5ef248621")
 	)
+	(text "R6/R7: (3-2)/0,02=50 Ohm\nSingle keypresses are barely noticable \non LEDs due to small impulses.\nDont make resistor too high (680Ohm way \ntoo high).\nSo the LEDs are a little bit useless."
+		(exclude_from_sim no)
+		(at 182.372 132.334 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "40560691-a018-43a5-b719-3f45d4942086")
+	)
 	(text "VF   2,8V\nCF   20mA\nR      10Ohm: Way too bright\n       120Ohm: Nearly too bright\n       1K: Looks good\n       2K2: Even better\n      2K: Thats it\n"
 		(exclude_from_sim no)
 		(at 228.6 77.216 0)
@@ -5072,7 +5083,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "680"
+		(property "Value" "51"
 			(at 200.152 99.187 0)
 			(effects
 				(font
@@ -5423,7 +5434,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "680"
+		(property "Value" "51"
 			(at 191.262 99.187 0)
 			(effects
 				(font
