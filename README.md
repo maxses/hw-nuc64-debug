@@ -1,6 +1,4 @@
-<div style="background:url(doc/background.jpg);">
-<h1>NUC64DEBUG</h1>
-</div>
+<h1 style="background:url(doc/background.jpg);">NUC64DEBUG</h1>
 
 ## Overview
 
