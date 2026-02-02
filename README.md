@@ -1,7 +1,5 @@
 <h1 style="background:url(doc/background.jpg);">NUC64DEBUG</h1>
 
-- ![#f03c15]Hello `#f03c15`World
-
 ## Overview
 
 |           |                                                               |
@@ -24,7 +22,7 @@ of an Nucleo64-Board.
 
 ## Connectors
 
-### Debug
+### DBG1
 
 | Connector-pin |  Function              |
 |:--------------|:-----------------------|
@@ -65,5 +63,5 @@ Version V2J20M4 did not work, after update to V2J38M27 problems disappeared.
 * V0.2.x: Boot-Button not functional. Connect J2-Pin2(VDD) to button pad in the corner.
 
 
-<div class="footer"> campo@seesslen.net </div>
+<div style="text-align: right;"> campo@seesslen.net </div>
 
