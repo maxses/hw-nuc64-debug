@@ -1,25 +1,5 @@
-<style>
-h1 {
-    background:url(doc/background.jpg);
-    border: 2px solid black;
-    font-size: 64px;
-    padding: 12px;
-}
-
-.footer {
-  border-top: 2px solid black;
-  text-align: right;
-  __position: fixed;
-  __left: 0;
-  right: 0;
-  width: 100%;
-  bottom: 0;
-}
-
-</style>
-
 <div style="background:url(doc/background.jpg);">
-# NUC64DEBUG
+<h1>NUC64DEBUG</h1>
 </div>
 
 ## Overview
