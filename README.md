@@ -25,20 +25,18 @@ h1 {
 |           |                                                               |
 |:----------|:--------------------------------------------------------------|
 | Name      | NUC64DEBUG                                                    |
-| URL       | [Link]( http://campo.seesslen.net/nuc64debug )                |
-| SW-Project| [Link]( http://hase.seesslen.net/redmine/projects/nuc64debug )|
 | HW-Rev    | v0.3.x                                                        |
 | Docu      | 20260117                                                      |
-| Dimensions| 17.15mm x 22.86mm                                             |
+| Dimensions| 17.30mm x 30.43mm                                             |
 
-Small adapter PCB to connect a STM32 based PCB via 10P-FPC with the STLink-part
+Small adapter PCB to connect a STM32 based custom PCB via 10P-FPC with the STLink-part
 of an Nucleo64-Board.
 
 ## PCB
 
 | Top                                              |  Bottom                                       |
 |:-------------------------------------------------|:----------------------------------------------|
-| <img src="doc/preview_bottom.png" width="256px"> | <img src="doc/preview_top.png" width="256px"> |
+| <img src="doc/nuc64-debug.jpg" width="256px"> | <img src="doc/nuc64-debug_bottom.jpg" width="256px"> |
 
 <div class="pagebreak"> </div>
 
